@@ -9280,15 +9280,15 @@ class NostalgiaForInfinityX(IStrategy):
             global_buy_protection_params = self.buy_protection_params[index]
             global_buy_group_params = self.buy_group_params[index]
             
-            if not self.buy_params[f"buy_condition_semi_swing_enable"] and global_buy_group_params[f"buy_condition_semi_swing_enable"]:
+            if not self.buy_params[f"buy_condition_semi_swing_enable"] and global_buy_group_params["semi_swing"]:
                 self.buy_params[f"buy_condition_{index}_enable"] = False
-            elif not self.buy_params[f"buy_condition_local_dip_enable"] and global_buy_group_params[f"buy_condition_local_dip_enable"]:
+            elif not self.buy_params[f"buy_condition_local_dip_enable"] and global_buy_group_params["local_dip"]:
                 self.buy_params[f"buy_condition_{index}_enable"] = False
-            elif not self.buy_params[f"buy_condition_uptrend_enable"] and global_buy_group_params[f"buy_condition_uptrend_enable"]:
+            elif not self.buy_params[f"buy_condition_uptrend_enable"] and global_buy_group_params["uptrend"]:
                 self.buy_params[f"buy_condition_{index}_enable"] = False
-            elif not self.buy_params[f"buy_condition_downtrend_enable"] and global_buy_group_params[f"buy_condition_downtrend_enable"]:
+            elif not self.buy_params[f"buy_condition_downtrend_enable"] and global_buy_group_params["downtrend"]:
                 self.buy_params[f"buy_condition_{index}_enable"] = False
-            elif not self.buy_params[f"buy_condition_long_mode_enable"] and global_buy_group_params[f"buy_condition_long_mode_enable"]:
+            elif not self.buy_params[f"buy_condition_long_mode_enable"] and global_buy_group_params["long_mode"]:
                 self.buy_params[f"buy_condition_{index}_enable"] = False
 
             if self.buy_params[f"buy_condition_{index}_enable"]:
@@ -10163,11 +10163,6 @@ class NostalgiaForInfinityX(IStrategy):
                 item_buy = reduce(lambda x, y: x & y, item_buy_logic)
                 dataframe.loc[item_buy, 'buy_tag'] += f"{index} "
                 conditions.append(item_buy)
-            else:
-                log.warning(
-                    "Buy %s has been disabled",
-                    index,
-            )
 
         if conditions:
             dataframe.loc[:, 'buy'] = reduce(lambda x, y: x | y, conditions)
