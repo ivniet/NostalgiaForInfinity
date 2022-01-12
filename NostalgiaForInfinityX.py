@@ -185,6 +185,11 @@ class NostalgiaForInfinityX(IStrategy):
     buy_params = {
         #############
         # Enable/Disable conditions
+        "buy_condition_semi_swing_enable": True,
+        "buy_condition_local_dip_enable": True,
+        "buy_condition_uptrend_enable": True,
+        "buy_condition_downtrend_enable": True,
+        "buy_condition_long_mode_enable": True,
         "buy_condition_1_enable": True,
         "buy_condition_2_enable": True,
         "buy_condition_3_enable": True,
@@ -257,6 +262,457 @@ class NostalgiaForInfinityX(IStrategy):
         # Enable/Disable conditions
         "sell_condition_1_enable": True,
         #############
+    }
+    
+    buy_group_params = {
+        1: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        2: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        3: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        4: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        5: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        6: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        7: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        8: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        9: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : True,
+            "long_mode" : False
+        },
+        10: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        11: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        12: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        13: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : True,
+            "long_mode" : False
+        },
+        14: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        15: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        16: {
+            "semi_swing": True,
+            "local_dip" : False,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        17: {
+            "semi_swing": True,
+            "local_dip" : False,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        18: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        19: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        20: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        21: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        22: {
+            "semi_swing": True,
+            "local_dip" : False,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        23: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : True,
+            "long_mode" : False
+        },
+        24: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        25: {
+            "semi_swing": True,
+            "local_dip" : False,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        26: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        27: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        28: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : True,
+            "long_mode" : False
+        },
+        29: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : True,
+            "long_mode" : False
+        },
+        30: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        31: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : True
+        },
+        32: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : True
+        },
+        33: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : True
+        },
+        34: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : True
+        },
+        35: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : True
+        },
+        36: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : True
+        },
+        37: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        38: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        39: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        40: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        41: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        42: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        43: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        44: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        45: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        46: {
+            "semi_swing": True,
+            "local_dip" : False,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        47: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        48: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        49: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        50: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        51: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : True,
+            "long_mode" : False
+        },
+        52: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        53: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        54: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        55: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        56: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : True,
+            "long_mode" : False
+        },
+        57: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : True,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        58: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        59: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        60: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        61: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        62: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : True,
+            "long_mode" : False
+        },
+        63: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        },
+        64: {
+            "semi_swing": True,
+            "local_dip" : True,
+            "uptrend"   : False,
+            "downtrend" : False,
+            "long_mode" : False
+        }
     }
 
     #############################################################
