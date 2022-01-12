@@ -10163,7 +10163,7 @@ class NostalgiaForInfinityX(IStrategy):
                 item_buy = reduce(lambda x, y: x & y, item_buy_logic)
                 dataframe.loc[item_buy, 'buy_tag'] += f"{index} "
                 conditions.append(item_buy)
-            else
+            else:
                 log.warning(
                     "Buy %s has been disabled",
                     index,
