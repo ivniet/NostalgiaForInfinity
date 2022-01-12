@@ -9278,6 +9278,18 @@ class NostalgiaForInfinityX(IStrategy):
         for index in self.buy_protection_params:
             item_buy_protection_list = [True]
             global_buy_protection_params = self.buy_protection_params[index]
+            global_buy_group_params = self.buy_group_params[index]
+            
+            if not self.buy_params[f"buy_condition_semi_swing_enable"] and global_buy_group_params[f"buy_condition_semi_swing_enable"]:
+                self.buy_params[f"buy_condition_{index}_enable"] = False
+            elif not self.buy_params[f"buy_condition_local_dip_enable"] and global_buy_group_params[f"buy_condition_local_dip_enable"]:
+                self.buy_params[f"buy_condition_{index}_enable"] = False
+            elif not self.buy_params[f"buy_condition_uptrend_enable"] and global_buy_group_params[f"buy_condition_uptrend_enable"]:
+                self.buy_params[f"buy_condition_{index}_enable"] = False
+            elif not self.buy_params[f"buy_condition_downtrend_enable"] and global_buy_group_params[f"buy_condition_downtrend_enable"]:
+                self.buy_params[f"buy_condition_{index}_enable"] = False
+            elif not self.buy_params[f"buy_condition_long_mode_enable"] and global_buy_group_params[f"buy_condition_long_mode_enable"]:
+                self.buy_params[f"buy_condition_{index}_enable"] = False
 
             if self.buy_params[f"buy_condition_{index}_enable"]:
                 # Standard protections - Common to every condition
@@ -10151,6 +10163,11 @@ class NostalgiaForInfinityX(IStrategy):
                 item_buy = reduce(lambda x, y: x & y, item_buy_logic)
                 dataframe.loc[item_buy, 'buy_tag'] += f"{index} "
                 conditions.append(item_buy)
+            else
+                log.warning(
+                    "Buy %s has been disabled",
+                    index,
+            )
 
         if conditions:
             dataframe.loc[:, 'buy'] = reduce(lambda x, y: x | y, conditions)
