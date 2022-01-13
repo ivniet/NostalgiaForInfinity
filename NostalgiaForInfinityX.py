@@ -289,7 +289,7 @@ class NostalgiaForInfinityX(IStrategy):
             "long_mode" : False
         },
         5: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
@@ -307,13 +307,13 @@ class NostalgiaForInfinityX(IStrategy):
             "long_mode" : False
         },
         8: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         9: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : False,
             "downtrend" : True,
             "long_mode" : False
@@ -331,37 +331,37 @@ class NostalgiaForInfinityX(IStrategy):
             "long_mode" : False
         },
         12: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         13: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : False,
             "downtrend" : True,
             "long_mode" : False
         },
         14: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         15: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         16: {
-            "local_dip" : False,
+            "local_dip" : True,
             "uptrend"   : False,
             "downtrend" : False,
             "long_mode" : False
         },
         17: {
-            "local_dip" : False,
+            "local_dip" : True,
             "uptrend"   : False,
             "downtrend" : False,
             "long_mode" : False
@@ -373,19 +373,19 @@ class NostalgiaForInfinityX(IStrategy):
             "long_mode" : False
         },
         19: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         20: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         21: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
@@ -397,19 +397,19 @@ class NostalgiaForInfinityX(IStrategy):
             "long_mode" : False
         },
         23: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : False,
             "downtrend" : True,
             "long_mode" : False
         },
         24: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         25: {
-            "local_dip" : False,
+            "local_dip" : True,
             "uptrend"   : False,
             "downtrend" : False,
             "long_mode" : False
@@ -421,19 +421,19 @@ class NostalgiaForInfinityX(IStrategy):
             "long_mode" : False
         },
         27: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         28: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : False,
             "downtrend" : True,
             "long_mode" : False
         },
         29: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : False,
             "downtrend" : True,
             "long_mode" : False
@@ -445,61 +445,61 @@ class NostalgiaForInfinityX(IStrategy):
             "long_mode" : False
         },
         31: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : False,
             "downtrend" : False,
             "long_mode" : True
         },
         32: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : False,
             "downtrend" : False,
             "long_mode" : True
         },
         33: {
-            "local_dip" : True,
-            "uptrend"   : True,
+            "local_dip" : False,
+            "uptrend"   : False,
             "downtrend" : False,
             "long_mode" : True
         },
         34: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : False,
             "downtrend" : False,
             "long_mode" : True
         },
         35: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : False,
             "downtrend" : False,
             "long_mode" : True
         },
         36: {
-            "local_dip" : True,
-            "uptrend"   : True,
+            "local_dip" : False,
+            "uptrend"   : False,
             "downtrend" : False,
             "long_mode" : True
         },
         37: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         38: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         39: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         40: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
@@ -511,25 +511,25 @@ class NostalgiaForInfinityX(IStrategy):
             "long_mode" : False
         },
         42: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         43: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         44: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         45: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
@@ -547,7 +547,7 @@ class NostalgiaForInfinityX(IStrategy):
             "long_mode" : False
         },
         48: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
@@ -559,13 +559,13 @@ class NostalgiaForInfinityX(IStrategy):
             "long_mode" : False
         },
         50: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         51: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : False,
             "downtrend" : True,
             "long_mode" : False
@@ -583,25 +583,25 @@ class NostalgiaForInfinityX(IStrategy):
             "long_mode" : False
         },
         54: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         55: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
         },
         56: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : False,
             "downtrend" : True,
             "long_mode" : False
         },
         57: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : True,
             "downtrend" : False,
             "long_mode" : False
@@ -631,7 +631,7 @@ class NostalgiaForInfinityX(IStrategy):
             "long_mode" : False
         },
         62: {
-            "local_dip" : True,
+            "local_dip" : False,
             "uptrend"   : False,
             "downtrend" : True,
             "long_mode" : False
